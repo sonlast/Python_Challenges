@@ -16,5 +16,12 @@ print("--------------------")
 print("")
 
 print(f"There are {numofCountrs} countries in Africa. Can you name them all?")
-print("\nWe will provide you three lives. | ❤ | ❤ | ❤ | If you guess wrong three times, You lose.")
+
+# user guesses countries of Africa
+# user have 3 lives, if user guesses wrong 3 times, game over
+# the country wil be removed from the list if the user guesses it correctly
+# there are points in each correct guess and computes it until the end of the game
+# the game will end if the user guesses all the countries or if the user runs out of lives
+# the game will display the number of countries the user guessed correctly  and the number of countries the user failed to guess 
+
 
