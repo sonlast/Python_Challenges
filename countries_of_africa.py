@@ -6,16 +6,18 @@ countries = ["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi"
 
 numofCountrs = len(countries)
 
-print("--------------------")
+print("|------------------|")
 print("|       Guess      |")
 print("|        the       |")
 print("|     Countries    |")
 print("|        of        |")
 print("|      Africa      |")
-print("--------------------")
+print("|------------------|")
 print("")
 
 print(f"There are {numofCountrs} countries in Africa. Can you name them all?")
+
+
 
 # user guesses countries of Africa
 # user have 3 lives, if user guesses wrong 3 times, game over
