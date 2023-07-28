@@ -1,4 +1,4 @@
-import os 
+import os, time 
 
 os.system("cls" if os.name == "nt" else "clear")
 
@@ -17,8 +17,35 @@ print("")
 
 print(f"There are {numofCountrs} countries in Africa. Can you name them all?")
 
+os.system("cls" if os.name == "nt" else "clear")
 
+def printGuessed():
+    print("You have guessed: ")
+    for i in range(len(countries)):
+        print(countries[i])
 
+count = 0
+lives = 3
+
+while True:
+    guess = input("\nGuess ").title()
+    
+    if guess in countries:
+        countries.remove(guess)
+        count += 1
+        print("Points: ", count)
+    elif guess not in countries:
+        print("Try Again")
+        lives -= 1
+        print("Lives: ", lives)
+        if lives == 0:
+            print("Game Over")
+            break
+        else:
+            continue
+
+print("Nice Game, You Guessed ", count, " Countries Correctly and you missed ", numofCountrs - count, " Countries.")
+print("The countries you missed are: ", countries, "and you guessed this following countries", printGuessed())
 # user guesses countries of Africa
 # user have 3 lives, if user guesses wrong 3 times, game over
 # the country wil be removed from the list if the user guesses it correctly
