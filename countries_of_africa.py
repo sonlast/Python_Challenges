@@ -6,6 +6,8 @@ countries = ["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi"
 
 numofCountrs = len(countries)
 
+print(f"There are {numofCountrs} countries in Africa. Can you name them all?")
+
 print("|------------------|")
 print("|       Guess      |")
 print("|        the       |")
@@ -14,10 +16,18 @@ print("|        of        |")
 print("|      Africa      |")
 print("|------------------|")
 print("")
-
-print(f"There are {numofCountrs} countries in Africa. Can you name them all?")
+time.sleep(2)
 
 os.system("cls" if os.name == "nt" else "clear")
+
+print("|------------------|")
+print("|       Guess      |")
+print("|        the       |")
+print("|     Countries    |")
+print("|        of        |")
+print("|      Africa      |")
+print("|------------------|")
+print("")
 
 def printGuessed():
     print("You have guessed: ")
@@ -28,24 +38,36 @@ count = 0
 lives = 3
 
 while True:
-    guess = input("\nGuess ").title()
+    guess = input("Guess: ").title()
+    
+    print("\nLet's see if there is", guess, "in the list...")
+    time.sleep(1)
+    print("Peeking...")
+    time.sleep(1)
+    print("Checking Answer...")
+    time.sleep(1)
+    print("Calculating Score...\n")
+    time.sleep(1)
     
     if guess in countries:
+        print("Correct!, There is", guess, "in the list\n")
         countries.remove(guess)
         count += 1
-        print("Points: ", count)
+        print(f"Your Points: {count}\n")
+        print("---------------------")
     elif guess not in countries:
         print("Try Again")
         lives -= 1
-        print("Lives: ", lives)
+        print(f"Lives: {lives}\n")
         if lives == 0:
-            print("Game Over")
+            print("\nGame Over!!!")
             break
         else:
             continue
 
-print("Nice Game, You Guessed ", count, " Countries Correctly and you missed ", numofCountrs - count, " Countries.")
-print("The countries you missed are: ", countries, "and you guessed this following countries", printGuessed())
+print(f"Nice Game, You Guessed {count} country/ies correctly and you missed {numofCountrs - count} country/ies.")
+time.sleep(1)
+
 # user guesses countries of Africa
 # user have 3 lives, if user guesses wrong 3 times, game over
 # the country wil be removed from the list if the user guesses it correctly
