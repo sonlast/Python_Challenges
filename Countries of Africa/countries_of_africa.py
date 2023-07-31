@@ -8,26 +8,28 @@ numofCountrs = len(countries)
 
 print(f"There are {numofCountrs} countries in Africa. Can you name them all?")
 
-print("|------------------|")
-print("|       Guess      |")
-print("|        the       |")
-print("|     Countries    |")
-print("|        of        |")
-print("|      Africa      |")
-print("|------------------|")
-print("")
+print("""
+|------------------|
+|       Guess      |
+|        the       |
+|     Countries    |
+|        of        |
+|      Africa      |
+|------------------|
+""")
 time.sleep(2)
 
 os.system("cls" if os.name == "nt" else "clear")
 
-print("|------------------|")
-print("|       Guess      |")
-print("|        the       |")
-print("|     Countries    |")
-print("|        of        |")
-print("|      Africa      |")
-print("|------------------|")
-print("")
+print("""
+|------------------|
+|       Guess      |
+|        the       |
+|     Countries    |
+|        of        |
+|      Africa      |
+|------------------|
+""")
 
 def printGuessed():
     print("You have guessed: ")
