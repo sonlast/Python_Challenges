@@ -4,8 +4,8 @@ def drawMountains(pen):
   pen.penup()
   pen.goto(-200,80)
   pen.pendown()
-  pen.color(5,114,3)
-  pen.fillcolor(5,114,3)
+  pen.color("#009900")
+  pen.fillcolor("#009900")
   pen.begin_fill()
   for peak in range(1,11):
     pen.goto(-200+40*peak,randint(40,160))
@@ -18,8 +18,8 @@ def drawBattlements(pen,x,y,w,h):
   pen.penup()
   pen.goto(x,y)
   pen.pendown()
-  pen.color(0,0,0)
-  pen.fillcolor(150,150,150)
+  pen.color("#99999C")
+  pen.fillcolor("#99999C")
   pen.begin_fill()
   xEnd = x + w
   while x<xEnd:
@@ -36,8 +36,8 @@ def drawWall(pen,x,y,w,h,crenellation):
   pen.penup()
   pen.goto(x,y)
   pen.pendown()
-  pen.color(0,0,0)
-  pen.fillcolor(150,150,150)
+  pen.color("#99999C")
+  pen.fillcolor("#99999C")
   pen.begin_fill()
   pen.goto(x+w,y)
   pen.goto(x+w,y+h)

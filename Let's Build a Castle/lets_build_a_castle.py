@@ -7,7 +7,7 @@ pen = turtle.Turtle()
 pen.speed(100)
 pen.color(0,0,0)
 wn = turtle.Screen()
-wn.bgcolor(66,202,244)
+wn.bgcolor("#0000BB")
 
 #4. start drawing
 drawMountains(pen)  
