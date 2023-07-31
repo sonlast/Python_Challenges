@@ -35,9 +35,11 @@ def printGuessed():
         print(countries[i])
 
 count = 0
+# user have 3 lives, if user guesses wrong 3 times, game over
 lives = 3
 
 while True:
+    # user guesses countries of Africa
     guess = input("Guess: ").title()
     
     print("\nLet's see if there is", guess, "in the list...")
@@ -51,7 +53,9 @@ while True:
     
     if guess in countries:
         print("Correct!, There is", guess, "in the list\n")
+        # the country wil be removed from the list if the user guesses it correctly
         countries.remove(guess)
+        # there are points in each correct guess and computes it until the end of the game
         count += 1
         print(f"Your Points: {count}\n")
         print("---------------------")
@@ -59,20 +63,15 @@ while True:
         print("Try Again")
         lives -= 1
         print(f"Lives: {lives}\n")
+        # the game will end if the user guesses all the countries or if the user runs out of lives
         if lives == 0:
             print("\nGame Over!!!")
             break
         else:
             continue
 
+# the game will display the number of countries the user guessed correctly  and the number of countries the user failed to guess 
 print(f"Nice Game, You Guessed {count} country/ies correctly and you missed {numofCountrs - count} country/ies.")
 time.sleep(1)
-
-# user guesses countries of Africa
-# user have 3 lives, if user guesses wrong 3 times, game over
-# the country wil be removed from the list if the user guesses it correctly
-# there are points in each correct guess and computes it until the end of the game
-# the game will end if the user guesses all the countries or if the user runs out of lives
-# the game will display the number of countries the user guessed correctly  and the number of countries the user failed to guess 
 
 
